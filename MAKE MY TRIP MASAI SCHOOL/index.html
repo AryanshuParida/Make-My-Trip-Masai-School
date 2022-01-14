@@ -1,0 +1,222 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>MakeMyTrip - #1 Travel website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="main.js"></script>
+    <style>
+      body {
+        font-family: "Lato";
+        color: rgb(107, 107, 107);
+      }
+      .background {
+        background: rgb(232, 232, 232);
+        background-repeat: no-repeat;
+        background-image: linear-gradient(to bottom, #051322, #15457c);
+        background-size: 100% 500px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .container {
+        width: 1200px;
+      }
+      .logo {
+        height: 36px;
+        width: 113px;
+      }
+
+      .data {
+        display: flex;
+        justify-content: center;
+        position: relative;
+      }
+
+      .categories {
+        background-color: white;
+        width: 950px;
+        margin-top: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 1px 15px 1px #7a7a7a;
+        display: flex;
+        justify-content: space-evenly;
+        z-index: 2;
+      }
+
+      .categories span {
+        font-size: 14px;
+        padding: 10px;
+        padding-top: 20px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .fas {
+        font-size: 24px;
+        margin-bottom: 5px;
+      }
+
+      .tickets {
+        background-color: white;
+        width: 1200px;
+        height: 300px;
+        position: absolute;
+        top: 70px;
+        z-index: 1;
+        border-radius: 10px;
+        padding: 20px;
+      }
+
+      .ticket-type {
+        margin-top: 50px;
+        font-size: 14px;
+        font-weight: 800;
+      }
+
+      .ticket-type span {
+        padding: 5px;
+      }
+
+      .ticket-type span i {
+        font-size: 14px;
+      }
+
+      .selected-ticket-type {
+        background-color: rgb(211, 211, 211);
+        border-radius: 30px;
+      }
+
+      .flight-search {
+        border: 1px solid rgb(230, 230, 230);
+        display: flex;
+        margin-top: 10px;
+        border-radius: 10px;
+      }
+
+      .flight {
+        margin: 15px;
+        color: rgb(33, 32, 32);
+        width: 300px;
+        border-right: 1px solid rgb(221, 220, 220);
+      }
+
+      .flight h1 {
+        margin: 0;
+      }
+
+      .fare-search {
+        margin-top: 50px;
+        font-size: 14px;
+        display: flex;
+      }
+
+      .fare-select {
+        width: 80px;
+        display: flex;
+      }
+
+      .selected-fare-type i {
+        font-size: 14px;
+        color: rgb(18, 119, 226);
+      }
+
+      .fare-type span {
+        color: rgb(80, 80, 80);
+      }
+
+      .search-button {
+        width: 216px;
+        height: 44px;
+        /* background-color: rgb(73, 161, 244); */
+        background-image: linear-gradient(93deg, #53b2fe, #065af3);
+        color: white;
+        font-size: 24px;
+        /* text-align: center; */
+        border-radius: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+        bottom: -20;
+        left: 40%;
+        /* top: 0; */
+      }
+    </style>
+  </head>
+
+  <body class="background">
+    <div class="container">
+      <img
+        class="logo"
+        src="https://imgak.mmtcdn.com/pwa_v3/pwa_hotel_assets/header/mmtLogoWhite.png"
+      />
+      <div class="data">
+        <div class="categories">
+          <span><i class="fas fa-plane-departure"></i>Flights</span>
+          <span><i class="fas fa-hotel"></i>Hotels</span>
+          <span><i class="fas fa-plane-departure"></i>Flights</span>
+          <span><i class="fas fa-plane-departure"></i>Flights</span>
+          <span><i class="fas fa-plane-departure"></i>Flights</span>
+          <span><i class="fas fa-plane-departure"></i>Flights</span>
+          <span><i class="fas fa-plane-departure"></i>Flights</span>
+          <span><i class="fas fa-plane-departure"></i>Flights</span>
+          <span><i class="fas fa-plane-departure"></i>Flights</span>
+          <span><i class="fas fa-plane-departure"></i>Flights</span>
+        </div>
+        <div class="tickets">
+          <div class="ticket-type">
+            <span class="selected-ticket-type"
+              ><i class="fas fa-check-circle"></i>ONEWAY</span
+            >
+            <span> <input type="radio" /> TRIP</span>
+            <span> <input type="radio" /> MULTI CITY</span>
+          </div>
+          <div class="flight-search">
+            <div class="flight">
+              <span>FROM</span>
+              <h1>Delhi</h1>
+              <span>DEL, Delhi Airport India</span>
+            </div>
+            <div class="flight">
+              <span>TO</span>
+              <h1>Bengaluru</h1>
+              <span>BRL, Kempegowda International air....</span>
+            </div>
+            <!-- HERE -->
+          </div>
+          <div class="fare-search">
+            <span class="fare-select">Select A Fare Type:</span>
+            <div class="fare-type">
+              <span class="selected-fare-type"
+                ><i class="fas fa-check-circle"></i>Regular Fares</span
+              >
+              <span> <input type="radio" /> Armed Forces Fares</span>
+              <span> <input type="radio" /> Student Fares</span>
+              <span> <input type="radio" /> Senior Citizen Fares</span>
+              <span> <input type="radio" /> Double Seat Fares</span>
+            </div>
+          </div>
+          <div class="search-button">SEARCH</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
